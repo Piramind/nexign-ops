@@ -10,10 +10,11 @@ minikube start --embed-certs --network bridge
 
 Чтобы образ появился в миникубе добавим env
 
+```
 eval $(minikube docker-env)
 
-docker buildx build -t my-flask-app:0.0.1 . 
-
+docker buildx build -t my-flask-app:0.0.1 . (да версия не конкретная)
+```
 ```
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
